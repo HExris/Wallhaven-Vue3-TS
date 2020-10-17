@@ -1,4 +1,6 @@
-# wallhaven
+# Rebuild Wallhaven
+
+### This a project that rebuild the wallhaven with the Vuejs @3.0 and TypeScript.
 
 ## Project setup
 ```
