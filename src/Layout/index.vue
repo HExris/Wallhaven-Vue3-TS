@@ -5,13 +5,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
 import Header from "@/components/Header.vue";
 
-const Layout = defineComponent({
-  name: 'Layout',
+const Layout = {
+  name: "Layout",
   component: { Header },
-});
+};
 
 export default Layout;
 </script>
@@ -20,8 +19,10 @@ export default Layout;
 #main {
   width: 100vw;
   height: 100vh;
-  background: url('~@/assets/images/main_background.jpg') fixed;
+  background: url("~@/assets/images/main_background.jpg") fixed;
   background-size: cover;
   overflow: auto;
+  padding: 30px;
+  box-sizing: border-box;
 }
 </style>
