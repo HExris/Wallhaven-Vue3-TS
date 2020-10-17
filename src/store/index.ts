@@ -1,36 +1,12 @@
 import { createStore } from 'vuex'
+import homeModule from './navMenu'
 
 export default createStore({
-  state: {
-    homePageMenu: [
-      {
-        title: "Latest",
-        icon: "clock"
-      },
-      {
-        title: "Toplist",
-        icon: "gem"
-      },
-      {
-        title: "Random",
-        icon: "random"
-      },
-      {
-        title: "Upload",
-        icon: "upload"
-      },
-      {
-        title: "Forums",
-        icon: "comments"
-      }
-    ]
-  },
-  getters: {
-    getMenu: state => {
-      return state.homePageMenu;
-    }
-  },
+  state: {},
+  getters: {},
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {
+    homeModule
+  }
 });
