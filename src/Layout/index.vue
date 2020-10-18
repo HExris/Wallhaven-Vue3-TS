@@ -16,13 +16,5 @@ export default Layout;
 </script>
 
 <style lang="less" scoped>
-#main {
-  width: 100vw;
-  height: 100vh;
-  background: url("~@/assets/images/main_background.jpg") fixed;
-  background-size: cover;
-  overflow: auto;
-  padding: 30px;
-  box-sizing: border-box;
-}
+@import url('./index');
 </style>
