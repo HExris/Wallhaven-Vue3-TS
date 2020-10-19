@@ -1,8 +1,9 @@
 html {
     font-size: 14px;
 }
+
 body {
-    font-size: 1em;
+    font-size  : 1em;
     font-family: Montserrat, "Source Sans Pro", Arial, sans;
 }
 
@@ -12,5 +13,37 @@ ol {
 
     li {
         list-style-type: none;
+    }
+}
+
+input {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration    : none;
+    transition-duration: .2s;
+    transition-property: color,
+        background,
+        opacity,
+        text-shadow,
+        box-shadow,
+        border-color,
+        transform;
+    -webkit-backface-visibility: hidden;
+}
+
+button {
+    background-color: transparent;
+    border          : none;
+    padding         : none;
+    cursor          : pointer;
+
+    &:focus {
+        outline: none;
     }
 }
