@@ -27,6 +27,7 @@ import { computed } from "vue";
 import { useStore } from "vuex";
 
 const NavMenu = {
+  name: "NavMenu",
   setup() {
     const store = useStore();
     const menuList = computed(() => store.getters.getMenu);
