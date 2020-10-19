@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import homeModule from './navMenu'
+import homeModule from './home'
 
 export default createStore({
   state: {},
