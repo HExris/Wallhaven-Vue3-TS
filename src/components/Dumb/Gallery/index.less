@@ -5,11 +5,20 @@
     flex-wrap: wrap;
 
     .image_wrapper {
+        position: relative;
         margin: 5px;
-        border-radius: 4px;
+        border-radius: 6px;
         overflow: hidden;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         transition: transform .2s ease;
+
+        .image_placeholder {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .9;
+            background-color: #242323;
+        }
 
         &:hover {
             transform: scale(1.05)
@@ -17,6 +26,8 @@
 
         img {
             display: block;
+            position: relative;
+            z-index: 1;
         }
     }
 }

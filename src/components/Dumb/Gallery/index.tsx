@@ -23,6 +23,7 @@ export default defineComponent({
             return (
                 list instanceof Array && list.map((v, index) => (
                     <div class="image_wrapper" key={index}>
+                        <div class="image_placeholder"></div>
                         <img src={v} />
                     </div>)
                 )
