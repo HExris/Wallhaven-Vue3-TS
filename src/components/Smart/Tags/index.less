@@ -1,0 +1,61 @@
+.pop_tags {
+    max-width      : 100em;
+    margin         : 1em;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-wrap      : wrap;
+    font-family    : "Source Sans Pro", Arial, sans;
+
+    .pop_tag_item {
+        display: block;
+        margin : 4px 8px;
+
+        &[data-saturate="80%"] {
+            filter   : saturate(80%);
+            font-size: .8em;
+        }
+
+        &[data-saturate="100%"] {
+            filter   : saturate(100%);
+            font-size: 1em;
+        }
+
+        &[data-saturate="150%"] {
+            filter   : saturate(150%);
+            font-size: 1.2em;
+        }
+
+        a {
+            color    : #9f9 !important;
+            font-size: 1.5em;
+
+            &:before {
+                content: '#';
+                color  : rgba(153, 255, 153, .4);
+            }
+        }
+    }
+}
+
+.more {
+    a {
+        color      : rgb(221, 221, 221);
+        font-weight: bold;
+        font-size  : 1.5em;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+a {
+    display  : block;
+    transform: scale(1);
+}
+
+a:hover {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    transform  : scale(1.05);
+}
