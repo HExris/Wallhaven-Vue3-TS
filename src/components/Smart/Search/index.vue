@@ -7,14 +7,14 @@
       @focus="setFocusStyle"
       @blur="setBlurStyle"
     >
-    <button><i
+    <button :title="uploadBtnText"><i
         class="fa fa-camera"
-        alt="Search for similar images"
+        :alt="uploadBtnText"
       ></i></button>
     <div class="search_spacer"></div>
-    <button><i
+    <button :title="searchBtnText"><i
         class="fa fa-search"
-        alt="Search"
+        :alt="searchBtnText"
       ></i></button>
   </div>
 </template>
@@ -25,6 +25,8 @@ const Search = {
   name: "Search",
   setup() {
     const placeholder = ref("Search...");
+    const uploadBtnText = ref("Search for similar images");
+    const searchBtnText = ref("Search");
     const setFocusStyle = (): void => {
       const searchBox: HTMLElement | null = document.querySelector(
         ".homepage_search_frame"
@@ -53,7 +55,13 @@ const Search = {
         );
       }
     };
-    return { placeholder, setFocusStyle, setBlurStyle };
+    return {
+      placeholder,
+      setFocusStyle,
+      setBlurStyle,
+      uploadBtnText,
+      searchBtnText,
+    };
   },
 };
 export default Search;
