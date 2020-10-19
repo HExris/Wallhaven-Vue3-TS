@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 import Layout from "@/Layout/index.vue";
 import Home from "@/views/Home/index.vue";
@@ -7,6 +7,8 @@ import Toplist from "@/views/Toplist/index.vue";
 import Random from "@/views/Random/index.vue";
 import Upload from "@/views/Upload/index.vue";
 import Forums from "@/views/Forums/index.vue";
+import SearchResults from "@/views/SearchResults/index.vue";
+import Tags from "@/views/Tags/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/home",
         name: "Home",
         component: Home
+      },
+      {
+        path: "/search",
+        name: "SearchResults",
+        component: SearchResults
       },
       {
         path: "/latest",
@@ -43,6 +50,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/forums",
         name: "Forums",
         component: Forums
+      },
+      {
+        path: "/tags",
+        name: "Tags",
+        component: Tags
       }
     ]
   }
@@ -51,6 +63,6 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
-export default router
+export default router;
