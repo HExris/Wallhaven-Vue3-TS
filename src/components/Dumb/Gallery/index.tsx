@@ -1,6 +1,6 @@
 import './index.less';
 import getAllImgList from "@/api/getList.ts";
-import { reactive, defineComponent, onMounted, computed } from "vue";
+import { reactive, defineComponent, onMounted } from "vue";
 interface GalleryState {
     imgList: any;
     topfourImgs: any;

@@ -6,12 +6,18 @@
 </template>
 
 <script lang="ts">
-import Header from "@/components/Dumb/Header/index.vue";
-import Rocket from "@/components/Rocket.vue";
+// import Header from "@/components/Dumb/Header/index.vue";
+import Rocket from "@/components/Dumb/Rocket/index.tsx";
+// import Gallery from "@/components/Dumb/Gallery/index.tsx";
 
 const Layout = {
   name: "Layout",
-  component: { Header },
+  component: {
+    Rocket,
+  },
+  mounted() {
+    // console.log(Rocket)
+  },
 };
 
 export default Layout;
