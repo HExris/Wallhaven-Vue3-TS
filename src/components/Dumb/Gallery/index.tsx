@@ -6,6 +6,7 @@ interface GalleryState {
     topfourImgs: any;
     restImgs: any;
 }
+
 export default defineComponent({
     name: "Gallery",
     setup() {
@@ -16,22 +17,22 @@ export default defineComponent({
         })
 
         onMounted(() => {
-            getAllImgList().then(res => {
-                if (res instanceof Array) {
-                    galleryState.imgList = [...res]
-                    galleryState.topfourImgs = [...res].slice(0, 4);
-                    galleryState.restImgs = [...res].slice(4);
-                }
-            })
+            getAllImgList().then((res: any) => {
+              if (res && res.data instanceof Array) {
+                galleryState.imgList = [...res.data];
+                galleryState.topfourImgs = [...res.data].slice(0, 4);
+                galleryState.restImgs = [...res.data].slice(4);
+              }
+            });
         })
 
         const renderImgList = (list: any) => {
             return (
-                list instanceof Array && list.map((v, index) => {
+                list instanceof Array && list.map(v => {
                     return v && (
-                        <div class="image_wrapper" key={index} >
+                        <div class="image_wrapper" key={v.id} >
                             <div class="image_placeholder"></div>
-                            <img src={v} />
+                            <img src={v.url} />
                         </div >
                     )
                 }

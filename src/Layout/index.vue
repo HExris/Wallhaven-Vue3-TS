@@ -12,7 +12,7 @@ import Rocket from "@/components/Dumb/Rocket/index.tsx";
 
 const Layout = {
   name: "Layout",
-  component: {
+  components: {
     Rocket,
   },
   mounted() {
